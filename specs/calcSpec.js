@@ -7,7 +7,9 @@ describe("Calculator", function() {
             expect(addition(7, 19)).toBe(26);
         });
         it("return error if strings instead of numbers", function() {
-            expect(addition("string", "moreString")).toBe("Error!");
+            spyOn(window, "alert");
+            addition("string", "moreString");
+            expect(window.alert).toHaveBeenCalledWith("Error!");
         });      
     });
 });
