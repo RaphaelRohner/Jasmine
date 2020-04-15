@@ -5,6 +5,6 @@ describe("Calculator", function() {
         });
         it("should return 26", function() {
             expect(addition(7, 19)).toBe(26);
-        });
+        });        
     });
 });
